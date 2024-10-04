@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!--import css จาก font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Thanthong Somwijit</span></a>
+
+        <ul class="nav-link">
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#project">Project</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+
+        <!--import icon จาก font-awesome -->
+        <!-- ไว้ใช้ตอนจอเล็กจึงต้องใส่เอาไว้ ตอนจอใหญ่ไม่แสดงให้เห็น-->
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+        <button class="visit-btn">Visit Github</button>
+    </header>
+
+    <section class="about" id="about">
+        <div class="about-container">
+
+            <img src="img/profile.jpg" alt="">
+
+            <div class="info-box">
+
+                <div class="text">
+                    <h3>Hello, I'm</h3>
+                    <h1>Thanthong Somwijit</h1>
+                    <span>Frontend Developer</span>
+                </div>
+
+                <div class="btn-group">
+                    <div class="btn">Download CV/Resume</div>
+                    <div class="btn">Contact</div>
+                </div>
+
+                <div class="social">
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="experience" id="experience">
+
+        <h2 class="section-title">Experience</h2>
+
+        <div class="experience-info">
+
+            <div class="grid">
+
+                <div class="grid-card">
+
+                    <i class="fa-solid fa-code"></i>
+                    <span>Frontend Development</span>
+                    <h3> 0 Years</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dignissimos delectus saepe vitae nihil ut natus iure vero vel exercitationem, deserunt quidem aliquid facere molestias ipsum optio impedit quasi incidunt.</p>
+                
+                </div>
+
+                <div class="grid-card">
+
+                    <i class="fa-brands fa-artstation"></i>
+                    <span>3D Animator</span>
+                    <h3> 0 Years</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dignissimos delectus saepe vitae nihil ut natus iure vero vel exercitationem, deserunt quidem aliquid facere molestias ipsum optio impedit quasi incidunt.</p>
+                
+                </div>
+
+                <div class="grid-card">
+
+                    <i class="fa-solid fa-desktop"></i>
+                    <span>VFX/VDO Editor</span>
+                    <h3> 0 Years</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dignissimos delectus saepe vitae nihil ut natus iure vero vel exercitationem, deserunt quidem aliquid facere molestias ipsum optio impedit quasi incidunt.</p>
+                
+                </div>
+
+                <div class="grid-card">
+
+                    <i class="fa-solid fa-palette"></i>
+                    <span>Graphic Designer</span>
+                    <h3> 0 Years</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dignissimos delectus saepe vitae nihil ut natus iure vero vel exercitationem, deserunt quidem aliquid facere molestias ipsum optio impedit quasi incidunt.</p>
+                
+                </div>
+
+            </div>
+
+            <img src="img/profile.jpg" alt="">
+
+        </div>
+    </section>
+
+    <section class="project" id="project">
+
+        <h2 class="section-title">Recent Projects</h2>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <img src="img/proj_1.jpg" alt="">
+                <h3>Project X</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eum commodi optio obcaecati. Eos asperiores vero reprehenderit sequi velit aspernatur! Libero exercitationem ea, excepturi eveniet qui aut dignissimos magnam voluptatum?</p>
+                <div class="btn-group">
+                    <div class="btn">live Demo</div>
+                    <div class="btn">Github</div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="img/proj_2.png" alt="">
+                <h3>Project Y</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eum commodi optio obcaecati. Eos asperiores vero reprehenderit sequi velit aspernatur! Libero exercitationem ea, excepturi eveniet qui aut dignissimos magnam voluptatum?</p>
+                <div class="btn-group">
+                    <div class="btn">live Demo</div>
+                    <div class="btn">Github</div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="img/proj_3.png" alt="">
+                <h3>Project Z</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eum commodi optio obcaecati. Eos asperiores vero reprehenderit sequi velit aspernatur! Libero exercitationem ea, excepturi eveniet qui aut dignissimos magnam voluptatum?</p>
+                <div class="btn-group">
+                    <div class="btn">live Demo</div>
+                    <div class="btn">Github</div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="contact" id="contact">
+
+        <div class="input-box">
+
+            <h2 class="section-title">Contact Me</h2>
+
+            <div class="input">
+                <input type="text" placeholder="example@email.com">
+
+                <i class="fa-solid fa-envelope"></i>
+
+            </div>
+
+            <div class="btn">Submit</div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <ul>
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+
+            <li>
+                <a href="#project">Project</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+
+        <p class="copyright">&copy; All Rights Reserved | Thanthong Somwijit</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

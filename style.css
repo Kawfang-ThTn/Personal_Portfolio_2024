@@ -1,0 +1,493 @@
+/*@@@@@@@@@@@@@@@ Default Setting @@@@@@@@@@@@@@*/
+
+*{
+    /*settingเริ่มต้นมาตรฐาน*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+
+/*@@@@@@@@@@@@@@@ Header @@@@@@@@@@@@@@*/
+
+header{
+    position: fixed;
+    top: 1rem;
+    /*ทำให้headerอยู่ตรงกลางแบบกลางจริงๆ*/
+    left: 50%;
+    transform: translate(-50%);
+    /*รูปแบบการจัดวาง*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    color: white;
+    /* 0.5บนล่าง/1.5ซ้ายขวา */
+    padding: 0.5rem 1.5rem;
+    border-radius: 3rem;
+    /* ให้ header อยู่บนสุด*/
+    z-index: 1000;
+}
+
+.logo{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    /*เพราะเรามี text หลายตัวในโลโก้ ถ้าหน้าจอหดตัวลง text มันจะทับกัน เลยต้องใส่ nowrap*/
+    text-wrap: nowrap;
+    /*สำหรับ hover*/
+    transition: 0.3s ease-in-out;
+}
+.logo:hover{
+    /*จะขยายเล็กน้อยตอน hover*/
+    transform: scale(1.1);
+}
+
+.nav-link{
+    display: flex;
+    gap: 2rem;
+}
+
+li a{
+    /*ใช้ relative เพราะจะใช้คู่กับ hover*/
+    position: relative;
+    color: white;
+    font-weight: 300;
+}
+li a::before{
+    position: absolute;
+    content: '';
+    width: 0;
+    left: 0;
+    height: 5px;
+    top: 25px;
+    border-radius: 1rem;
+    transition: 0.3s ease-in-out;
+    background: linear-gradient(to right,rgb(0,157,255),rgb(255,0,255));
+}
+li a:hover::before{
+    width: 100%;
+}
+
+.visit-btn{
+    padding: 0.8rem 1.5rem;
+    border-radius: 3rem;
+    border: none;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    text-wrap: nowrap;
+    transition: 0.3s ease-in-out;
+    background: linear-gradient(to right,rgb(0,157,255),rgb(255,0,255));
+}
+.visit-btn:hover{
+    transform: scale(1.1);
+    background: linear-gradient(to right,rgb(255,0,255),rgb(0,157,255));
+}
+
+#menu-icon{
+    font-size: 2rem;
+    /*ตอนนี้จอใหญ่เลยตั้งเป็น none*/
+    display: none;
+}
+
+
+/*@@@@@@@@@@@@@@@ About Section @@@@@@@@@@@@@@*/
+
+section{
+    /*ทำให้สูงเต็มหน้าจอ*/
+    min-height: 100vh;
+    /* 8rem คือบนล่าง / 12% คือซ้ายขวา */
+    padding: 8rem 12%;
+    width: 100%;
+    position: relative;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about .about-container{
+    /* เพราะใน container เรามี element 2 ตัว คือรูปและ info */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+}
+.about img{
+    width: 30vw;
+    border-radius: 50%;
+}
+
+.info-box{
+    display: flex;
+    /* เพราะต้องการให้เนื้อหาใน info วางแบบบนทับล่าง */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+.info-box h3{
+    font-size: 1.8rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+.info-box h1{
+    font-size: 4rem;
+    font-weight: 600;
+}
+.info-box span{
+    background: linear-gradient(to right,rgb(255,0,255),rgb(0,157,255));
+    /* ต้องการให้สี baackground ยัดลงไปใน text */
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+}
+
+.btn-group{
+    display: flex;
+    gap: 1rem;
+}
+.btn{
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: 500;
+    text-wrap: nowrap;
+    transition: 0.2s ease-in-out;
+}
+.btn:hover{
+    background-color: black;
+    color: white;
+}
+
+.social{
+    display: flex;
+    gap: 2rem;
+}
+.social i{
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.social i:hover{
+    transform: scale(1.1);
+}
+
+
+/*@@@@@@@@@@@@@@@ Experience Section @@@@@@@@@@@@@@*/
+
+.section-title{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.experience-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+.experience img{
+    width: 24vw;
+    border-radius: 3rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.grid-card{
+    border: 2px solid black;
+    border-radius: 3rem;
+    padding: 3rem;
+    /* จัดวางเนื้อหาข้างใน grid-card*/
+    display: flex;
+    flex-direction: column;
+    /* เรียงข้อความ ไอคอน จากซ้ายไปขวา */
+    align-items: baseline;
+    justify-content: left;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.grid-card:hover{
+    transform: scale(1.1);
+    background-color: black;
+    color: white;
+}
+.grid-card i{
+    /* ทำให้ ไอคอน ใหญ่ขึ้น*/
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.grid-card span{
+    font-size: 1.5rem;
+    font-weight: 500;
+    background: linear-gradient(to right,rgb(0,157,255),rgb(255,0,255));
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.8rem;
+}
+.grid-card h3{
+    margin-bottom: 0.4rem;
+}
+
+
+/*@@@@@@@@@@@@@@@ Project Section @@@@@@@@@@@@@@*/
+
+.project-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 2rem;
+}
+.project-card{
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    border: 2px solid black;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.project-card img{
+    width: 20vw;
+    border-radius: 1rem;
+}
+.project-card:hover{
+    background-color: black;
+    color: white;
+    /* ขยับขึ้นด้านบนและขยายเล็กน้อย */
+    transform: translateY(-10px)scale(1.1);
+}
+.project-card:hover .btn{
+    border: 2px solid white;
+    color: white;
+}
+.project-card:hover .btn:hover{
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+}
+.project-card h3{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+
+/*@@@@@@@@@@@@@@@ Contact Section @@@@@@@@@@@@@@*/
+
+.input{
+    /* ใช้ relative เพราะจะจัดวางไอคอนให้อยู่ติดกับ input*/
+    position: relative;
+}
+.input i{
+    position: absolute;
+    font-size: 4rem;
+    top: 50%;
+    left: 10px;
+    /* ขยับขึ้น 50% และ ขยับไปทางขวา 50%*/
+    transform: translate(50%,-50%);
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+.input-box input{
+    border-radius: 3rem;
+    border: 2px solid black;
+    padding: 2rem 8rem;
+    font-size: 3rem;
+}
+.input-box input::placeholder{
+    font-size: 3rem;
+}
+
+
+/*@@@@@@@@@@@@@@@ Contact Section @@@@@@@@@@@@@@*/
+
+footer{
+    bottom: 0;
+    left: 0;
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer ul{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+footer ul li a{
+    color: black;
+    font-weight: 600;
+}
+
+.copyright{
+    font-size: 300;
+    margin-top: 2rem;
+}
+
+
+/*@@@@@@@@@@@@@@@ Scroll Bar @@@@@@@@@@@@@@*/
+
+::-webkit-scrollbar{
+    /* ขนาดสกอบาร์ */
+    width: 20px;
+}
+::-webkit-scrollbar-track{
+    /* พื้นหลังสกอบาร์ */
+    background-color: rgb(219, 219, 219);
+}
+::-webkit-scrollbar-thumb{
+    /* สีสกอบาร์ */
+    background: linear-gradient(to bottom,rgb(255,0,255),rgb(0,157,255));
+}
+
+
+/*@@@@@@@@@@@@@@@ Responsive Web @@@@@@@@@@@@@@*/
+
+@media(max-width:1280px){
+    header{
+        padding: 1rem 2rem;
+        gap: 2rem;
+    }
+
+    .about .about-container{
+        gap: 3rem;
+    }
+
+    .experience-info{
+        flex-direction: column;
+    }
+
+    .input-box input{
+        padding: 2rem 5rem;
+        font-size: 2.5rem;
+    }
+    .input input::placeholder{
+        font-size: 2.5rem;
+    }
+    .input-box i{
+        font-size: 2.5rem;
+    }
+}
+
+@media(max-width:768px){
+    header{
+        padding: 1rem 1rem;
+        gap: 1rem;
+    }
+    header .logo{
+        font-size: 1rem;
+    }
+    header .visit-btn{
+        display: none;
+    }
+
+    .about-container{
+        flex-direction: column;
+    }
+
+    .input-box input{
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+    }
+    .input input::placeholder{
+        font-size: 1.5rem;
+    }
+    .input-box i{
+        display: none;
+    }
+
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .experience-info img{
+        width: 70vw;
+    }
+}
+
+@media(max-width:600px){
+    header{
+        padding: 1rem 5rem;
+        gap: 8rem;
+    }
+    header .logo{
+        font-size: 1.5rem;
+    }
+
+    .about-container img{
+        width: 80vw;
+    }
+
+    .input-box input{
+        padding: 0.5rem 3rem;
+        width: 80%;
+        font-size: 1.5rem;
+    }
+    .input-box input::placeholder{
+        font-size: 1.5rem;
+    }
+
+    footer ul{
+        gap: 1rem;
+    }
+
+    header #menu-icon{
+        display: block;
+    }
+
+    .nav-link{
+        position: absolute;
+        top: 100%;
+        margin-top: 1rem;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.9);
+        border-radius: 3rem;
+        /* ตั้งค่าทุกอย่างให้เรียบร้อยค่อยเขียนบรรทัดนี้ */
+        display: none;
+    }
+    .nav-link li{
+        margin-top: 1.5rem;
+        padding: 1rem;
+    }
+    /* เขียนต่อจากบรรทัด display: none; */
+    /* .active จะเริ่มทำงานเมื่อตอนที่มีการใช้งานจากผู้ใช้ในที่นี้คือปุ่มแฮมเบอร์เกอร์*/
+    /* เสร็จแล้วยังใช้งานไม่ได้ ต้องไปทำต่อใน JavaScript จ้า*/
+    .nav-link.active{
+        display: block;
+    }
+}
