@@ -160,6 +160,10 @@ section{
     color: transparent;
     font-size: 2rem;
 }
+.info-box p{
+    margin-top: 0.8rem;
+    font-size: 1.2rem;
+}
 
 .btn-group{
     display: flex;
