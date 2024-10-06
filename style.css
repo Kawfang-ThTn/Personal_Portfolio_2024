@@ -29,8 +29,8 @@ header{
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(8px);
     color: white;
-    /* 0.5บนล่าง/1.5ซ้ายขวา */
-    padding: 0.5rem 1.5rem;
+    /* 1.5 บนล่าง/ 3ซ้ายขวา */
+    padding: 1.5rem 3rem;
     border-radius: 3rem;
     /* ให้ header อยู่บนสุด*/
     z-index: 1000;
@@ -161,7 +161,7 @@ section{
     font-size: 2rem;
 }
 .info-box p{
-    margin-top: 0.8rem;
+    margin-top: 1rem;
     font-size: 1.2rem;
 }
 
