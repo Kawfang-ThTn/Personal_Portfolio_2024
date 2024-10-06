@@ -102,6 +102,10 @@ li a:hover::before{
     display: none;
 }
 
+.social i{
+    color: rgba(0, 0, 0, 1);
+}
+
 
 /*@@@@@@@@@@@@@@@ About Section @@@@@@@@@@@@@@*/
 
