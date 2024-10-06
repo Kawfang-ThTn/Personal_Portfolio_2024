@@ -305,6 +305,10 @@ section{
 
 /*@@@@@@@@@@@@@@@ Contact Section @@@@@@@@@@@@@@*/
 
+.contact p{
+    font-size: 1.2rem;
+}
+
 .input{
     /* ใช้ relative เพราะจะจัดวางไอคอนให้อยู่ติดกับ input*/
     position: relative;
