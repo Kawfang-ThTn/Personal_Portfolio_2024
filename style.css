@@ -92,6 +92,9 @@ li a:hover::before{
     transform: scale(1.1);
     background: linear-gradient(to right,rgb(255,0,255),rgb(0,157,255));
 }
+.visit-btn a{
+    color: white;
+}
 
 #menu-icon{
     font-size: 2rem;
