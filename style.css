@@ -27,7 +27,7 @@ header{
     gap: 5rem;
 
     background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(8px);
+    /*backdrop-filter: blur(8px);*/
     color: white;
     /* 1.5 บนล่าง/ 3ซ้ายขวา */
     padding: 1.5rem 3rem;
@@ -41,7 +41,7 @@ header{
     font-size: 1.3rem;
     font-weight: 600;
     /*เพราะเรามี text หลายตัวในโลโก้ ถ้าหน้าจอหดตัวลง text มันจะทับกัน เลยต้องใส่ nowrap*/
-    text-wrap: nowrap;
+    /*text-wrap: nowrap;*/
     /*สำหรับ hover*/
     transition: 0.3s ease-in-out;
 }
@@ -84,7 +84,7 @@ li a:hover::before{
     font-size: 1rem;
     color: white;
     cursor: pointer;
-    text-wrap: nowrap;
+    /*text-wrap: nowrap;*/
     transition: 0.3s ease-in-out;
     background: linear-gradient(to right,rgb(0,157,255),rgb(255,0,255));
 }
@@ -175,7 +175,7 @@ section{
     border: 2px solid black;
     cursor: pointer;
     font-weight: 500;
-    text-wrap: nowrap;
+    /*text-wrap: nowrap;*/
     transition: 0.2s ease-in-out;
 }
 .btn:hover{
@@ -194,6 +194,9 @@ section{
 }
 .social i:hover{
     transform: scale(1.1);
+}
+.social span{
+    display: none;
 }
 
 
