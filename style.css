@@ -373,6 +373,10 @@ footer ul li a{
     margin-top: 2rem;
 }
 
+section .con-siz{
+    font-size: 44px;
+}
+
 
 /*@@@@@@@@@@@@@@@ Scroll Bar @@@@@@@@@@@@@@*/
 
@@ -452,6 +456,10 @@ footer ul li a{
     .experience-info img{
         width: 70vw;
     }
+
+    section .con-siz{
+        font-size: 30px;
+    }
 }
 
 @media(max-width:600px){
@@ -508,5 +516,9 @@ footer ul li a{
     /* เสร็จแล้วยังใช้งานไม่ได้ ต้องไปทำต่อใน JavaScript จ้า*/
     .nav-link.active{
         display: block;
+    }
+
+    section .con-siz{
+        font-size: 24px;
     }
 }
