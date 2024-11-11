@@ -106,6 +106,12 @@ li a:hover::before{
     color: rgba(0, 0, 0, 1);
 }
 
+.section-title{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
 
 /*@@@@@@@@@@@@@@@ About Section @@@@@@@@@@@@@@*/
 
@@ -205,30 +211,21 @@ a{
 
 /*@@@@@@@@@@@@@@@ Experience Section @@@@@@@@@@@@@@*/
 
-.section-title{
-    text-align: center;
-    font-size: 4rem;
-    font-weight: 600;
-    margin-bottom: 3rem;
-}
 
-.experience-info{
+#experience .experience-info{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5rem;
 }
-.experience img{
-    width: 24vw;
-    border-radius: 3rem;
-}
 
-.grid{
+
+#experience .experience-info .grid{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(1,1fr);
     gap: 2rem;
 }
-.grid-card{
+#experience .experience-info .grid-card{
     border: 2px solid black;
     border-radius: 3rem;
     padding: 3rem;
@@ -241,17 +238,17 @@ a{
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
-.grid-card:hover{
+#experience .experience-info .grid-card:hover{
     transform: scale(1.1);
     background-color: black;
     color: white;
 }
-.grid-card i{
+#experience .experience-info .grid-card i{
     /* ทำให้ ไอคอน ใหญ่ขึ้น*/
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
-.grid-card span{
+#experience .experience-info .grid-card span{
     font-size: 1.5rem;
     font-weight: 500;
     background: linear-gradient(to right,rgb(0,157,255),rgb(255,0,255));
@@ -259,34 +256,13 @@ a{
     color: transparent;
     margin-bottom: 0.8rem;
 }
-.grid-card h3{
-    margin-bottom: 0.4rem;
-}
-
-.grid-card .exp-btn-grp{
-    display: flex;
-    gap: 1rem;
-}
-.grid-card .exp-btn{
-    border-radius: 3rem;
-    padding: 0.5rem 1.5rem;
-    border: 2px solid black;
-    cursor: pointer;
-    font-weight: 500;
-    /*text-wrap: nowrap;*/
-    transition: 0.2s ease-in-out;
-}
-.grid-card .exp-btn:hover{
-    background-color: black;
-    color: white;
-}
 
 
 /*@@@@@@@@@@@@@@@ Project Section @@@@@@@@@@@@@@*/
 
 .project-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(3,1fr);
     gap: 2rem;
 }
 .project-card{
@@ -347,6 +323,7 @@ a{
     transform: translate(50%,-50%);
 }
 
+
 .input-box{
     display: flex;
     flex-direction: column;
@@ -356,6 +333,8 @@ a{
     gap: 2rem;
     margin-top: 5rem;
 }
+
+/*
 .input-box input{
     border-radius: 3rem;
     border: 2px solid black;
@@ -365,6 +344,7 @@ a{
 .input-box input::placeholder{
     font-size: 3rem;
 }
+*/
 
 
 /*@@@@@@@@@@@@@@@ Contact Section @@@@@@@@@@@@@@*/
@@ -431,6 +411,12 @@ section .con-siz{
         flex-direction: column;
     }
 
+    .project-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+
+    /*
     .input-box input{
         padding: 2rem 5rem;
         font-size: 2.5rem;
@@ -441,6 +427,7 @@ section .con-siz{
     .input-box i{
         font-size: 2.5rem;
     }
+        */
 }
 
 @media(max-width:768px){
@@ -458,7 +445,11 @@ section .con-siz{
     .about-container{
         flex-direction: column;
     }
+    .project-grid{
+        grid-template-columns: repeat(1,1fr);
+    }
 
+    /*
     .input-box input{
         padding: 1rem 2rem;
         font-size: 1.8rem;
@@ -469,6 +460,7 @@ section .con-siz{
     .input-box i{
         display: none;
     }
+        */
 
     .grid{
         grid-template-columns: repeat(1,1fr);
@@ -496,6 +488,7 @@ section .con-siz{
         width: 80vw;
     }
 
+    /*
     .input-box input{
         padding: 0.5rem 3rem;
         width: 80%;
@@ -504,6 +497,7 @@ section .con-siz{
     .input-box input::placeholder{
         font-size: 1.5rem;
     }
+    */
 
     footer ul{
         gap: 1rem;
